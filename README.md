@@ -7,7 +7,7 @@ Este proyecto es un prototipo interactivo de un sistema **ERP SAP** basado en la
 * **Nombre:** Gilmar Edson Betancur Calapiña
 * **Nombre** Herrera David Jesus
 * **Nombre** Mendívil Paredes Jose
-* **Nombre**
+* **Nombre** Villca Villca Jhoel Mauricio
 * **Entidad Académica:** Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca (USFX)
 * **Carrera:** Ingeniería de Sistemas
 
