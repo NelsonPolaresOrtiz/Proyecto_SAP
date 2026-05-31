@@ -4,6 +4,10 @@ Este proyecto es un prototipo interactivo de un sistema **ERP SAP** basado en la
 
 ## 👥 Consultor Certificado / Desarrollador
 * **Nombre:** Nelson Polares Ortiz
+* **Nombre:** Gilmar Edson Betancur Calapiña
+* **Nombre**
+* **Nombre**
+* **Nombre**
 * **Entidad Académica:** Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca (USFX)
 * **Carrera:** Ingeniería de Sistemas
 
