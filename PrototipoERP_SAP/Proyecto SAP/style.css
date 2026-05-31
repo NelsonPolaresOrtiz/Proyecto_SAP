@@ -1,0 +1,206 @@
+:root {
+    --azul-corporativo: #0A2540;
+    --fondo-general: #F4F6F9;
+    --tarjetas-header: #FFFFFF;
+    --texto-principal: #1A202C;
+    --texto-secundario: #718096;
+    --exito-ia: #48BB78;
+    --alerta-critico: #E53E3E;
+    --borde: #E2E8F0;
+    --sidebar-activo: #1E3A8A;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--fondo-general);
+    color: var(--texto-principal);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Estructura del Contenedor de Aplicación */
+.app-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra Superior Header */
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: var(--tarjetas-header);
+    border-bottom: 1px solid var(--borde);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--azul-corporativo);
+}
+
+.search-bar {
+    width: 400px;
+    height: 38px;
+    background-color: #EDF2F7;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 0 15px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.search-bar:focus {
+    background-color: #FFFFFF;
+    border-color: var(--sidebar-activo);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-fullscreen {
+    background: #EDF2F7;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--azul-corporativo);
+    transition: background 0.2s;
+}
+.btn-fullscreen:hover { background: #E2E8F0; }
+
+.user-profile { font-weight: 600; font-size: 14px; }
+.btn-logout { color: var(--alerta-critico); text-decoration: none; font-weight: 600; font-size: 14px; }
+
+/* Envoltorio General Dividido (Sidebar + Espacio de Trabajo) */
+.main-wrapper {
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 70px);
+    width: 100%;
+}
+
+/* Panel Lateral de Navegación */
+.sidebar {
+    width: 260px;
+    height: 100%;
+    background-color: var(--azul-corporativo);
+    padding-top: 15px;
+    flex-shrink: 0;
+}
+
+.menu-item {
+    padding: 14px 24px;
+    color: #94A3B8;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+.menu-item:hover { color: #FFFFFF; background: rgba(255, 255, 255, 0.04); }
+.menu-item.active {
+    background-color: var(--sidebar-activo);
+    color: #FFFFFF;
+    font-weight: 600;
+    border-left: 4px solid var(--exito-ia);
+}
+
+/* Contenedor del Espacio de Trabajo */
+.main-content {
+    flex: 1;
+    height: 100%;
+    padding: 24px;
+    overflow-y: auto;
+    background-color: var(--fondo-general);
+}
+
+.view-section {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+.view-section.active { display: flex; }
+
+/* Tarjetas Informativas y Mensajes */
+.welcome-banner {
+    background: #FFFFFF;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid var(--borde);
+}
+.welcome-banner h2 { font-size: 20px; color: var(--azul-corporativo); margin-bottom: 4px; }
+.welcome-banner p { font-size: 14px; color: var(--texto-secundario); }
+
+/* Distribuciones de Grillas Adaptivas */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%; }
+.grid-layout-split { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; width: 100%; align-items: stretch; }
+
+.card {
+    background: #FFFFFF;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid var(--borde);
+}
+.card h4 { color: var(--texto-secundario); font-size: 12px; text-transform: uppercase; margin-bottom: 6px; }
+.card .metric { font-size: 30px; font-weight: 700; color: var(--azul-corporativo); }
+
+.table-container {
+    background: #FFFFFF;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid var(--borde);
+}
+
+/* Tablas Modulares */
+.sap-table { width: 100%; border-collapse: collapse; }
+.sap-table th { background: #F8FAFC; padding: 14px; text-align: left; color: var(--texto-secundario); font-size: 13px; border-bottom: 2px solid var(--borde); }
+.sap-table td { padding: 14px; border-bottom: 1px solid var(--borde); font-size: 14px; }
+
+/* Asistentes e Indicadores */
+.ia-box { background: #FAFAFA; border: 1px solid var(--borde); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+.ia-item { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot.green { background: var(--exito-ia); }
+.dot.blue { background: #3182CE; }
+.dot.yellow { background: #DD6B20; }
+
+.badge { padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: 600; display: inline-block; }
+.badge-success { background: #DEF7EC; color: #03543F; }
+.badge-danger { background: #FDE8E8; color: #9B1C1C; }
+.badge-warning { background: #FEF08A; color: #713F12; }
+
+/* Elementos de Formularios */
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.sap-select-input, .sap-text-input { width: 100%; padding: 12px; border: 1px solid var(--borde); border-radius: 6px; font-size: 14px; background: #FFF; }
+
+.btn-sap { padding: 12px 20px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer; border: none; }
+.btn-primary { background: var(--azul-corporativo); color: white; }
+.btn-primary:hover { background: var(--sidebar-activo); }
+.btn-secondary { background: #EDF2F7; color: var(--azul-corporativo); }
+
+.alert-danger-custom { background: #FDE8E8; border-left: 5px solid var(--alerta-critico); padding: 15px; border-radius: 6px; color: #9B1C1C; width: 100%; }
