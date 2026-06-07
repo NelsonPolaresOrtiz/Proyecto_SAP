@@ -3,7 +3,7 @@
 Este proyecto es un prototipo interactivo de un sistema **ERP SAP** basado en la interfaz **SAP Fiori**. Permite simular los flujos de trabajo e interacciones en tiempo real entre múltiples mandantes y módulos empresariales utilizando una arquitectura web integrada.
 
 ## 👥 Consultor Certificado / Desarrollador
-* **Nombre:** 6Polares Ortiz Nelson(SIS)
+* **Nombre:** Polares Ortiz Nelson(SIS)
 * **Nombre:** Betancur Calapiña Gilmar Edson(SIS)
 * **Nombre:** Herrera David Jesus(SIS)
 * **Nombre:** Mendívil Paredes Jose(SIS)
