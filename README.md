@@ -1,4 +1,4 @@
-# ERPSystem - Simulador Académico SAP Lite ERP (Fiori Style)
+# ERPSystem - Simulador Académico SAP ERP (Fiori Style) HANA
 
 Este proyecto es un prototipo interactivo de un sistema **ERP SAP** basado en la interfaz **SAP Fiori**. Permite simular los flujos de trabajo e interacciones en tiempo real entre múltiples mandantes y módulos empresariales utilizando una arquitectura web integrada.
 
